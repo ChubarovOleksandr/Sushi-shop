@@ -1,0 +1,42 @@
+// z-index
+
+//  1 - for basical element
+//  5 - for upper element
+// 10 - for next level
+// 50 - for modal  
+
+// default theme colors
+
+$bg: rgb(17, 17, 17);
+
+$bg2: rgb(27,27,27);
+
+$first: rgb(255, 255, 255); // for important and big title or element which must concentrate view
+
+$second: rgb(119, 119, 119); // for less important, default text, border
+
+$third: rgb(44,44,44); // for text with $first bg
+
+$fourth: rgb(126, 121, 121);
+
+$fifth: rgb(163, 131, 117);
+
+$sixth: rgb(170,138,79);
+
+$seventh:  rgb(173, 166, 166);
+
+$eight: rgb(61, 61, 61);
+
+$error: rgb(241, 80, 80);
+
+
+
+$Roboto: 'Roboto', sans-serif;
+
+$Open: 'Open Sans', sans-serif;
+
+$Poppins: 'Poppins', sans-serif;
+
+$Montserat: 'Montserrat', sans-serif;
+
+$Nunito: 'Nunito Sans', sans-serif;

@@ -1,0 +1,135 @@
+// import
+
+@import "../variables.scss";
+
+//style
+
+.header {
+   z-index: 10;
+   height: 10dvh;
+   width: 100%;
+   border-bottom: 1px solid rgb(40, 40, 40);
+   a {
+      display: inline-block;
+      position: relative;
+      color: $second;
+      font-family: $Montserat;
+      font-weight: 700;
+      font-size: 16px;
+      text-transform: uppercase;
+      overflow: hidden;
+      padding: 10px 0;
+      z-index: 1;
+      &:visited {
+         color: $second;
+      }
+      &:hover {
+         color: $first;
+         transition: color 0.4s;
+      }
+      &:hover::before {
+         width: 100%;
+         right: 50%;
+      }
+      &:hover::after {
+         width: 100%;
+         left: 50%;
+      }
+      &:before {
+         content: "";
+         position: absolute;
+         right: 50%;
+         bottom: 0px;
+         width: 0;
+         height: 1px;
+         background-color: $first;
+         transition: width 0.4s ease;
+      }
+      &:after {
+         content: "";
+         position: absolute;
+         left: 50%;
+         bottom: 0px;
+         width: 0;
+         height: 1px;
+         background-color: $first;
+         transition: width 0.4s ease;
+      }
+   }
+   a.active {
+      color: $first;
+      &:hover {
+         &:before,
+         &:after {
+            display: none;
+         }
+      }
+   }
+   .header__body {
+      width: 70%;
+      max-width: 70%;
+      margin: 0 auto;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .left {
+         display: flex;
+         justify-content: space-between;
+         img.header__logo {
+            width: 70px;
+            height: 70px;
+         }
+         .card__basket {
+            display: flex;
+            align-items: center;
+            position: relative;
+            margin: 0 60px;
+            border: none;
+            &:after,
+            &:before {
+               display: none;
+            }
+            .card__counter {
+               position: absolute;
+               display: block;
+               left: 28%;
+               bottom: 15%;
+               background: rgb(105, 105, 105);
+               border-radius: 100%;
+               width: 18px;
+               height: 18px;
+               color: $first;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               font-size: 12px;
+               z-index: 5;
+            }
+            .card__basket-icon {
+               width: 40px;
+               height: 35px;
+               margin: 0 5px 0 15px;
+               transition: filter 0.4s;
+            }
+            &:hover {
+               .card__basket-icon {
+                  filter: brightness(2);
+               }
+            }
+         }
+         .card__basket.active {
+            .card__basket-icon {
+               filter: brightness(2);
+            }
+         }
+      }
+      .right {
+         display: flex;
+         justify-content: space-between;
+         a {
+            margin: 0 0 0 40px;
+         }
+      }
+   }
+}

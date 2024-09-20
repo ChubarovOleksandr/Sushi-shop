@@ -1,0 +1,90 @@
+// import
+
+@import "../variables.scss";
+
+/////////
+
+.info {
+   .info__title {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: $Nunito;
+      font-size: 48px;
+      margin: 70px auto;
+      span {
+         background: rgba(119, 119, 119, 0.7);
+         border-radius: 100%;
+         padding: 5px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         margin: 0 30px 0 0;
+         width: 60px;
+         height: 60px;
+         font-size: 44px;
+      }
+   }
+   .accordion {
+      max-width: 1200px;
+      margin: 0 auto;
+      font-family: $Nunito;
+      font-size: 18px;
+      .accordion__item {
+         background: $bg2;
+         border-radius: 30px;
+         margin-bottom: 20px;
+         .accordion__button.active {
+            background: $third;
+            transition: background 0.2s;
+            &:after {
+               content: '-';
+            }
+         }
+         .accordion__button {
+            border-radius: 30px;
+            color: $first;
+            font-size: 24px;
+            padding: 20px 30px;
+            width: 100%;
+            text-align: left;
+            background: $eight;
+            transition: background 0.2s;
+            position: relative;
+            &:after {
+               position: absolute;
+               content: '+';
+               top: 50%;
+               right: 30px;
+               transform: translate(0, -50%);
+            }
+            &:hover {
+               background: $third;
+               transition: background 0.2s;
+            }
+         }
+         .accordion__content {
+            max-height: 0;
+            padding: 0px 30px;
+            transition: max-height 0.2s ease-out;
+            overflow: hidden;
+            p:first-child {
+               padding-top: 30px;
+            }
+            p:last-child {
+               padding-bottom: 30px;
+            }
+            .accordion__text {
+               padding: 10px 0;
+               span {
+                  color: $sixth;
+               }
+            }
+            .accordion__text--alert {
+               color: $error;
+               padding: 35px 0 20px 0;
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,90 @@
+// import
+
+@import "../variables.scss";
+
+// style
+
+.home {
+   height: 100%;
+   position: relative;
+   .main {
+      height: 70%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .background {
+         position: absolute;
+         top: 0;
+         left: 0;
+         background: url("src/assets/img/firstPage_image.png") 0% 23% / auto 145% no-repeat;
+         width: 100%;
+         height: 100%;
+         z-index: -1;
+      }
+      .main__body {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+         width: 70%;
+         margin: 0 auto;
+         font-family: $Nunito;
+         color: $first;
+         text-transform: uppercase;
+         .pretitle,
+         .posttitle {
+            font-size: 16px;
+            font-weight: 500;
+            letter-spacing: 1.5px;
+            opacity: 0.9;
+         }
+         .pretitle {
+            align-self: flex-end;
+         }
+         .main__title-line {
+            display: flex;
+            position: relative;
+            .title {
+               font-size: 175px;
+               text-wrap: wrap;
+               text-align: right;
+               font-weight: 700;
+               z-index: -10;
+            }
+            .main__button {
+               position: absolute;
+               left: 0;
+               bottom: 10%;
+               background: $first;
+               color: $third;
+               font-weight: 900;
+               font-size: 20px;
+               padding: 3% 4.5%;
+               border-radius: 25px;
+               letter-spacing: 2px;
+               transition: all .4s;
+               &:hover {
+                  transition: all .4s;
+                  box-shadow: 0 0 10px $first;
+               }
+            }
+         }
+      }
+   }
+   
+   .slick-slider {
+      z-index: -5;
+      .slider__item {
+         width: 250px !important;
+         text-transform: uppercase;
+         background: $bg2;
+         color: $fourth;
+         position: relative;
+         font-size: 16px;
+         font-family: $Nunito;
+         padding: 20px 0;
+         border-radius: 25px;
+         text-align: center;
+      }
+   }
+}

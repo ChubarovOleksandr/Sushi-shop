@@ -1,0 +1,16 @@
+// import
+
+@import "./variables.scss";
+
+// style
+
+body {
+   background: $bg;
+}
+#root {
+   height: 100%;
+}
+.wrapper {
+   height: 100%;
+   color: #fff;
+}
